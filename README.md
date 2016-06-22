@@ -28,6 +28,9 @@ Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https:/
     $ sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
 ```
   * Clone [neovim/neovim](https://github.com/neovim/neovim)
+```bash
+    $ git clone https://github.com/neovim/neovim.git
+```
   * Build Neovim by running `make`
 ```bash
     $ cd neovim
