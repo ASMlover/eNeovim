@@ -18,6 +18,31 @@
   * `,gs` brings up [vim-fugitive](https://github.com/tpope/vim-fugitive), used as `:Gstatus`
   * `,gc` used as `:Gcommit`
 
-## **Neovim**
+## **Neovim for Linux**
+### **Build Neovim**
+Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https://github.com/neovim/neovim/wiki/Following-HEAD) page.
+  * General requirements
+    - A recent version of Clang or GCC version 4.3 and above
+    - CMake version 2.8.7 and above, build with TLS/SSL support
+```bash
+    $ sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
+```
+  * Clone [neovim/neovim](https://github.com/neovim/neovim)
+  * Build Neovim by running `make`
+```bash
+    $ cd neovim
+    $ make
+```
+### **Install Neovim**
+Once you've built Neovim, install it with the following commands:
+```bash
+    $ sudo make install
+```
+### **Uninstall Neovim**
+To uninstall Neovim installed with `sudo make install`:
+```bash
+    $ sudo rm /usr/local/bin/nvim
+    $ sudo rm -r /usr/local/share/nvim/
+```
 
 ## **Install**
