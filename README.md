@@ -21,31 +21,74 @@
 ## **Neovim for Linux**
 ### **Build Neovim**
 Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https://github.com/neovim/neovim/wiki/Following-HEAD) page.
-  * General requirements
+  * General requirements:
     - A recent version of Clang or GCC version 4.3 and above
     - CMake version 2.8.7 and above, build with TLS/SSL support
-```bash
+```sh
     $ sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
 ```
   * Clone [neovim/neovim](https://github.com/neovim/neovim)
-```bash
+```sh
     $ git clone https://github.com/neovim/neovim.git
 ```
   * Build Neovim by running `make`
-```bash
+```sh
     $ cd neovim
     $ make
 ```
 ### **Install Neovim**
 Once you've built Neovim, install it with the following commands:
-```bash
+```sh
     $ sudo make install
 ```
 ### **Uninstall Neovim**
 To uninstall Neovim installed with `sudo make install`:
-```bash
+```sh
     $ sudo rm /usr/local/bin/nvim
     $ sudo rm -r /usr/local/share/nvim/
 ```
 
-## **Install**
+## **Neovim for macOS**
+Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https://github.com/neovim/neovim/wiki/Following-HEAD) page.
+### **Build Neovim**
+  * General requirements:
+    - A recent version of Clang or GCC version 4.3 and above
+    - CMake version 2.8.7 and above, build with TLS/SSL support
+    - Install [Xcode](https://developer.apple.com/) and [Homebrew](http://brew.sh/) or [MacPorts](https://www.macports.org/)
+    - Install Xcode commandline tools `xcode-select --install`
+  * Install other dependencies:
+```zsh
+    $ brew install libtool automake cmake pkg-config gettext
+```
+  * After this you may need to run make distclean && make before the tests will run
+```zsh
+    $ make distclean
+    $ make
+```
+  * **If you see wget certificate errors**(for OSX before version 10.10/Yosemite):
+```zsh
+    $ brew install curl-ca-bundle
+    $ echo CA_CERTIFICATE=$(brew --prefix curl-ca-bundle)/share/ca-bundle.crt >> ~/.wgetrc
+```
+  * Clone [neovim/neovim](https://github.com/neovim/neovim)
+```zsh
+    $ git clone https://github.com/neovim/neovim.git
+```
+  * Build Neovim by running `make`
+```zsh
+    $ cd neovim
+    $ make
+```
+### **Install Neovim**
+Once you've built Neovim, install it with the following commands:
+```zsh
+    $ make install
+```
+### **Uninstall Neovim**
+To uninstall Neovim installed with `make install`:
+```zsh
+    $ rm /usr/local/bin/nvim
+    $ rm -r /usr/local/share/nvim/
+```
+
+## **Install eNeovim**
