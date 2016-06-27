@@ -25,6 +25,7 @@ Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https:/
     - A recent version of Clang or GCC version 4.3 and above
     - CMake version 2.8.7 and above, build with TLS/SSL support
 ```sh
+    $ pip install neovim
     $ sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
 ```
   * Clone [neovim/neovim](https://github.com/neovim/neovim)
@@ -58,7 +59,8 @@ Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https:/
     - Install Xcode commandline tools `xcode-select --install`
   * Install other dependencies:
 ```zsh
-    $ brew install libtool automake cmake pkg-config gettext
+    $ pip install neovim
+    $ sudo brew install libtool automake cmake pkg-config gettext
 ```
   * After this you may need to run make distclean && make before the tests will run
 ```zsh
@@ -67,7 +69,7 @@ Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https:/
 ```
   * **If you see wget certificate errors**(for OSX before version 10.10/Yosemite):
 ```zsh
-    $ brew install curl-ca-bundle
+    $ sudo brew install curl-ca-bundle
     $ echo CA_CERTIFICATE=$(brew --prefix curl-ca-bundle)/share/ca-bundle.crt >> ~/.wgetrc
 ```
   * Clone [neovim/neovim](https://github.com/neovim/neovim)
@@ -82,13 +84,13 @@ Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https:/
 ### **Install Neovim**
 Once you've built Neovim, install it with the following commands:
 ```zsh
-    $ make install
+    $ sudo make install
 ```
 ### **Uninstall Neovim**
 To uninstall Neovim installed with `make install`:
 ```zsh
-    $ rm /usr/local/bin/nvim
-    $ rm -r /usr/local/share/nvim/
+    $ sudo rm /usr/local/bin/nvim
+    $ sudo rm -r /usr/local/share/nvim/
 ```
 
 ## **Install eNeovim**
