@@ -25,7 +25,7 @@ Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https:/
     - A recent version of Clang or GCC version 4.3 and above
     - CMake version 2.8.7 and above, build with TLS/SSL support
 ```sh
-    $ pip install neovim
+    $ sudo pip install neovim
     $ sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
 ```
   * Clone [neovim/neovim](https://github.com/neovim/neovim)
@@ -59,7 +59,7 @@ Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https:/
     - Install Xcode commandline tools `xcode-select --install`
   * Install other dependencies:
 ```zsh
-    $ pip install neovim
+    $ sudo pip install neovim
     $ sudo brew install libtool automake cmake pkg-config gettext
 ```
   * After this you may need to run make distclean && make before the tests will run
