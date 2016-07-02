@@ -93,4 +93,25 @@ To uninstall Neovim installed with `make install`:
     $ sudo rm -r /usr/local/share/nvim/
 ```
 
-## **Install eNeovim**
+## **Install eNeovim for Linux**
+  * Clone and install [eNeovim](https://github.com/ASMlover/eNeovim)
+```sh
+    $ git clone https://github.com/ASMlover/eNeovim.git
+    $ cd eNeovim
+    $ ./install.sh install
+```
+  * Install powerline-fonts
+```sh
+    $ git clone https://github.com/powerline/fonts.git
+    $ cd fonts
+    $ ./install.sh
+    $ sudo cp -R ~/.local/share/fonts /usr/share/fonts
+    $ sudo fc-cache -f -v
+```
+  * Build **[YCM](https://github.com/Valloric/YouCompleteMe)**
+
+    If you enabled the plugin `ycm(let g:plugin_ycm_enabled=1)`, you need to build it.
+```sh
+    $ cd ~/.config/nvim/plugged/YouCompleteMe
+    $ ./install.py --clang-completer
+```
