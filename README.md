@@ -28,7 +28,7 @@ Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https:/
     $ sudo pip install neovim
     $ sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
 ```
-  * Clone [neovim/neovim](https://github.com/neovim/neovim)
+  * Clone **[neovim](https://github.com/neovim/neovim)**
 ```sh
     $ git clone https://github.com/neovim/neovim.git
 ```
@@ -72,7 +72,7 @@ Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https:/
     $ sudo brew install curl-ca-bundle
     $ echo CA_CERTIFICATE=$(brew --prefix curl-ca-bundle)/share/ca-bundle.crt >> ~/.wgetrc
 ```
-  * Clone [neovim/neovim](https://github.com/neovim/neovim)
+  * Clone **[neovim](https://github.com/neovim/neovim)**
 ```zsh
     $ git clone https://github.com/neovim/neovim.git
 ```
@@ -94,7 +94,7 @@ To uninstall Neovim installed with `make install`:
 ```
 
 ## **Install eNeovim for Linux**
-  * Clone and install [eNeovim](https://github.com/ASMlover/eNeovim)
+  * Clone and install **[eNeovim](https://github.com/ASMlover/eNeovim)**
 ```sh
     $ git clone https://github.com/ASMlover/eNeovim.git
     $ cd eNeovim
@@ -115,3 +115,4 @@ To uninstall Neovim installed with `make install`:
     $ cd ~/.config/nvim/plugged/YouCompleteMe
     $ ./install.py --clang-completer
 ```
+  * **[neovim](https://github.com/neovim/neovim)** for Linux
