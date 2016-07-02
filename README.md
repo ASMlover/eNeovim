@@ -100,6 +100,13 @@ To uninstall Neovim installed with `make install`:
     $ cd eNeovim
     $ ./install.sh install
 ```
+  * Clone and install **[ag](https://github.com/ggreer/the_silver_searcher)**
+```sh
+    $ git clone https://github.com/ggreer/the_silver_searcher.git ag
+    $ cd ag
+    $ ./build.sh
+    $ sudo make install
+```
   * Install powerline-fonts
 ```sh
     $ git clone https://github.com/powerline/fonts.git
