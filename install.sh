@@ -42,7 +42,7 @@ upgrade_repo() {
 
 clone_repo() {
   echo "cloning eNeovim ..."
-  if [ ! -e $app_dir/eNvim ]; then
+  if [ ! -e $app_dir/nvim ]; then
     app_dir=$HOME/$app_name
     git clone $app_url $app_dir
     cd $app_dir
@@ -61,8 +61,7 @@ install_vim_plug() {
     git clone $plug_url
   else
     echo "upgrading vim-plug ..."
-    cd vim-plug && git pull
-    cd -
+    cd vim-plug && git pull && cd -
   fi
   cp $app_dir/vim-plug/plug.vim $HOME/.config/nvim/autoload
 }
