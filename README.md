@@ -1,6 +1,6 @@
 # **eNeovim**
 ***
-**Configure files for [neovim](https://github.com/neovim/neovim), built for Linux and macOS.**
+**Configure files for [Neovim](https://github.com/neovim/neovim), built for Linux and macOS.**
 
 ## **Usage**
   * `,d` brings up [NERDTree](https://github.com/scrooloose/nerdtree), a sidebar buffer for navigating and manipulating files, open a fresh NERD tree
@@ -28,7 +28,7 @@ Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https:/
     $ sudo pip install neovim
     $ sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
 ```
-  * Clone **[neovim](https://github.com/neovim/neovim)**
+  * Clone **[Neovim](https://github.com/neovim/neovim)**
 ```sh
     $ git clone https://github.com/neovim/neovim.git
 ```
@@ -72,7 +72,7 @@ Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https:/
     $ sudo brew install curl-ca-bundle
     $ echo CA_CERTIFICATE=$(brew --prefix curl-ca-bundle)/share/ca-bundle.crt >> ~/.wgetrc
 ```
-  * Clone **[neovim](https://github.com/neovim/neovim)**
+  * Clone **[Neovim](https://github.com/neovim/neovim)**
 ```zsh
     $ git clone https://github.com/neovim/neovim.git
 ```
@@ -120,6 +120,36 @@ To uninstall Neovim installed with `make install`:
     If you enabled the plugin `ycm(let g:plugin_ycm_enabled=1)`, you need to build it.
 ```sh
     $ cd ~/.config/nvim/plugged/YouCompleteMe
-    $ ./install.py --clang-completer
+    $ python install.py --clang-completer
 ```
-  * **[neovim](https://github.com/neovim/neovim)** for Linux
+
+## **Install eNeovim for macOS**
+  * Clone and install **[eNeovim](https://github.com/ASMlover/eNeovim)**
+```zsh
+    $ git clone https://github.com/ASMlover/eNeovim.git
+    $ cd eNeovim
+    $ ./install.sh install
+```
+  * Clone and install **[ag](https://github.com/ggreer/the_silver_searcher)**
+```zsh
+    $ git clone https://github.com/ggreer/the_silver_searcher.git ag
+    $ cd ag
+    $ ./build.sh
+    $ sudo make install
+```
+  * Install powerline-fonts
+```zsh
+    $ git clone https://github.com/powerline/fonts.git
+    $ cd fonts
+    $ ./install.sh
+```
+  * Build **[YCM](https://github.com/Valloric/YouCompleteMe)**
+
+    If you enabled the plugin `ycm(let g:plugin_ycm_enabled=1)`, you need to build it.
+```zsh
+    $ cd ~/.config/nvim/plugged/YouCompleteMe
+    $ python install.py --clang-completer
+```
+
+**[Neovim](https://github.com/neovim/neovim)** with **[eNeovim](https://github.com/ASMlover/eNeovim)** screen shot
+![Neovim with eNeovim](./extras/res/nvim.png "Neovim with eNeovim")
