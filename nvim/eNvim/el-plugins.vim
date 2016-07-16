@@ -25,9 +25,9 @@
 " ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 " POSSIBILITY OF SUCH DAMAGE.
 
-" Plugs here are part of the core setup.
+" Plugins here are part of the core setup.
 " DO NOT add plugs to this list, as they might get removed when you upgrade.
-" Please add any extra plugs you want in ./local/plugs.vim.
+" Please add any extra plugins you want in ~/.config/nvim/eNvim/local/plugs.vim.
 call plug#begin('~/.config/nvim/plugged')
   " molokai color scheme for nvim
   Plug 'ASMlover/molokai'
@@ -45,10 +45,10 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
   " display the indention levels with thin vertical lines
   Plug 'Yggdroot/indentLine', {'on': 'LeadingSpaceToggle'}
-  " git commands in vim
-  Plug 'tpope/vim-fugitive'
   " rename the current file in the vim buffer and retain relative path
   Plug 'danro/rename.vim', {'on': 'Rename'}
+  " git commands in vim
+  Plug 'tpope/vim-fugitive'
   " smart status airline for vim
   Plug 'ASMlover/vim-airline'
   Plug 'vim-airline/vim-airline-themes'

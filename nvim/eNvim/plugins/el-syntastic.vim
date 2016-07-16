@@ -27,4 +27,4 @@
 
 " configure for syntastic
 let g:syntastic_python_python_exec = 'python'
-let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_python_checkers = ['pyflakes', 'pylint']
