@@ -91,9 +91,9 @@ install_plugins() {
 }
 
 do_install() {
-  clone_repo    "successfully cloned" $app_name
-  create_vimrc  "setting up vimrc"
-  install_plugins  "now updating/installing plugins using vim-plug"
+  clone_repo        "successfully cloned" $app_name
+  create_vimrc      "setting up vimrc"
+  install_plugins   "now updating/installing plugins using vim-plug"
   echo 'installing eNeovim successfully ...'
 }
 
