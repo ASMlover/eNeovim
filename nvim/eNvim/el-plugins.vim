@@ -26,13 +26,16 @@
 " POSSIBILITY OF SUCH DAMAGE.
 
 " Plugins here are part of the core setup.
-" DO NOT add plugs to this list, as they might get removed when you upgrade.
+" DO NOT add plugins to this list, as they might get removed when you upgrade.
 " Please add any extra plugins you want in ~/.config/nvim/eNvim/local/plugs.vim.
 call plug#begin('~/.config/nvim/plugged')
-  " molokai color scheme for nvim
-  Plug 'ASMlover/molokai'
-  " solarized color scheme for nvim
-  Plug 'ASMlover/vim-colors-solarized'
+  if g:using_color_solarized
+    " solarized color scheme for nvim
+    Plug 'ASMlover/vim-colors-solarized'
+  else
+    " molokai color scheme for nvim
+    Plug 'ASMlover/molokai'
+  endif
   " help folks to align text, etc
   Plug 'vim-scripts/Align', {'on': 'Align'}
   " use ag(the_silver_searcher, better than ack, which is better than grep)
