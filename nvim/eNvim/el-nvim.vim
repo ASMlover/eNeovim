@@ -56,11 +56,6 @@ set listchars=tab:>-,trail:-                                 " show tab as '>---
 set t_Co=256                                                 " set number of colors
 set background=dark                                          " set {color} for the background
 set guifont=Consolas:h11                                     " set fonts be used for the gui version of vim
-if g:using_color_solarized
-  colorscheme solarized                                      " setting the currently active color scheme
-else
-  colorscheme molokai
-endif
 if WINDOWS()
   if has('gui_running')
     au GUIEnter * simalt ~x
@@ -73,6 +68,11 @@ if WINDOWS()
   language messages zh_CN.utf-8
 else
   let g:solarized_termcolors=256
+endif
+if g:using_color_solarized
+  colorscheme solarized                                      " setting the currently active color scheme
+else
+  colorscheme molokai
 endif
 
 " keyboard shortcuts
