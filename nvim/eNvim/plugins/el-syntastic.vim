@@ -27,4 +27,6 @@
 
 " configure for syntastic
 let g:syntastic_python_python_exec = 'python'
-let g:syntastic_python_checkers = ['pyflakes', 'pylint']
+let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
