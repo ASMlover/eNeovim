@@ -28,6 +28,7 @@
 Import el-install.vim
 
 set showcmd
+set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
 if g:using_tab_indent
   set tabstop=4                                              " actual tabs occupy 4 characters
   set shiftwidth=4                                           " normal mode indentation commands use 4 spaces
