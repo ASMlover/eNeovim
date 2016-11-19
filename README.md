@@ -1,4 +1,4 @@
-# **eNeovim**
+# **eNeovim: Configure for Neovim**
 ***
 **Configure files for [Neovim](https://github.com/neovim/neovim), built for Linux and macOS.**
 
