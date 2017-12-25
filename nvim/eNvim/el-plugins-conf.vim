@@ -28,7 +28,10 @@
 Import plugins/el-nerdtree.vim
 Import plugins/el-indentline.vim
 Import plugins/el-airline.vim
-if g:plugin_syntastic_enabled
+if g:plugin_ale_enabled
+  " ale configure
+  Import plugins/el-ale.vim
+else
   " syntastic configure
   Import plugins/el-syntastic.vim
 endif
