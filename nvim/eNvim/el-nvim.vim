@@ -77,7 +77,7 @@ else
   colorscheme molokai
 endif
 if &diff
-  colorscheme apprentice
+  colorscheme apprentice                                     " setting the color scheme for `nvim -d`
 endif
 
 " keyboard shortcuts
