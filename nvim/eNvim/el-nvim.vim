@@ -76,6 +76,9 @@ if g:using_color_solarized
 else
   colorscheme molokai
 endif
+if &diff
+  colorscheme apprentice
+endif
 
 " keyboard shortcuts
 if WINDOWS()

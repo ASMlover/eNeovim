@@ -36,6 +36,8 @@ call plug#begin('~/.config/nvim/plugged')
     " molokai color scheme for nvim
     Plug 'ASMlover/molokai'
   endif
+  " a dark, low-contrast color scheme for `nvim -d`(just as vimdiff)
+  Plug 'romainl/Apprentice'
   " help folks to align text, etc
   Plug 'vim-scripts/Align', {'on': 'Align'}
   " use ag(the_silver_searcher, better than ack, which is better than grep)
