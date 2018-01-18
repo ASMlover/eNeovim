@@ -34,8 +34,8 @@ Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https:/
 ```
   * Build Neovim by running `make`
 ```sh
-    $ rm -rf .deps build
     $ cd neovim
+    $ rm -rf .deps build
     $ make CMAKE_BUILD_TYPE=Release
 ```
 ### **Install Neovim**
