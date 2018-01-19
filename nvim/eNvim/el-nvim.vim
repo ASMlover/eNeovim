@@ -71,11 +71,12 @@ if WINDOWS()
 else
   let g:solarized_termcolors=256
 endif
-if g:using_color_solarized
-  colorscheme solarized                                      " setting the currently active color scheme
-else
-  colorscheme molokai
-endif
+" if g:using_color_solarized
+"   colorscheme solarized                                      " setting the currently active color scheme
+" else
+"   colorscheme molokai
+" endif
+execute 'colorscheme ' . ['molokai', 'solarized', 'apprentice'][RANDOM() % 3]
 if &diff
   colorscheme apprentice                                     " setting the color scheme for `nvim -d`
 endif
