@@ -35,6 +35,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'ASMlover/molokai'
   " a dark, low-contrast color scheme for `nvim -d` (the same as vimdiff)
   Plug 'romainl/Apprentice'
+  " a dark, space-vim color scheme
+  Plug 'ASMlover/space-vim-dark'
   " help folks to align text, etc
   Plug 'vim-scripts/Align', {'on': 'Align'}
   " use ag(the_silver_searcher, better than ack, which is better than grep)
