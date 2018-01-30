@@ -37,6 +37,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'romainl/Apprentice'
   " a dark, space-vim color scheme
   Plug 'ASMlover/space-vim-dark'
+  " additional Vim syntax highlighting for C++
+  Plug 'ASMlover/EnhancedCppHighlight'
   " help folks to align text, etc
   Plug 'vim-scripts/Align', {'on': 'Align'}
   " use ag(the_silver_searcher, better than ack, which is better than grep)
