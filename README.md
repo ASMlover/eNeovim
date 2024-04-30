@@ -36,18 +36,22 @@ Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https:/
 ```sh
     $ cd neovim
     $ rm -rf .deps build
-    $ make CMAKE_BUILD_TYPE=Release
+    $ make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/local/neovim" CMAKE_BUILD_TYPE=Release
 ```
 ### **Install Neovim**
 Once you've built Neovim, install it with the following commands:
 ```sh
-    $ sudo make install
+    $ make install
+    $ pip3 install neovim
 ```
 ### **Uninstall Neovim**
-To uninstall Neovim installed with `sudo make install`:
+There is a CMake target to uninstall Neovim after `make install`:
 ```sh
-    $ sudo rm /usr/local/bin/nvim
-    $ sudo rm -r /usr/local/share/nvim/
+    $ cmake --build build/ --target uninstall
+```
+Or just delete the `CMAKE_INSTALL_PREFIX` artifacts:
+```sh
+    $ rm -rf $HOME/local/neovim
 ```
 
 ## **Neovim for macOS**
@@ -80,18 +84,22 @@ Before upgrading to a new version, **ALWAYS** check the [Following HEAD](https:/
   * Build Neovim by running `make`
 ```zsh
     $ cd neovim
-    $ make CMAKE_BUILD_TYPE=Release
+    $ make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/local/neovim" CMAKE_BUILD_TYPE=Release
 ```
 ### **Install Neovim**
 Once you've built Neovim, install it with the following commands:
 ```zsh
-    $ sudo make install
+    $ make install
+    $ pip3 install neovim
 ```
 ### **Uninstall Neovim**
-To uninstall Neovim installed with `make install`:
+There is a CMake target to uninstall Neovim after `make install`:
 ```zsh
-    $ sudo rm /usr/local/bin/nvim
-    $ sudo rm -r /usr/local/share/nvim/
+    $ cmake --build build/ --target uninstall
+```
+Or just delete the `CMAKE_INSTALL_PREFIX` directory:
+```zsh
+    $ rm -rf $HOME/local/neovim
 ```
 
 ## **Install eNeovim for Linux**
@@ -121,7 +129,8 @@ To uninstall Neovim installed with `make install`:
     If you enabled the plugin `ycm(let g:plugin_ycm_enabled=1)`, you need to build it.
 ```sh
     $ cd ~/.config/nvim/plugged/YouCompleteMe
-    $ python install.py --clang-completer
+    $ git submodule update --init --recursive
+    $ python3 install.py --clangd-completer
 ```
 
 ## **Install eNeovim for macOS**
@@ -149,7 +158,8 @@ To uninstall Neovim installed with `make install`:
     If you enabled the plugin `ycm(let g:plugin_ycm_enabled=1)`, you need to build it.
 ```zsh
     $ cd ~/.config/nvim/plugged/YouCompleteMe
-    $ python install.py --clang-completer
+    $ git submodule update --init --recursive
+    $ python3 install.py --clangd-completer
 ```
 
 **[Neovim](https://github.com/neovim/neovim)** with **[eNeovim](https://github.com/ASMlover/eNeovim)** screen shot
